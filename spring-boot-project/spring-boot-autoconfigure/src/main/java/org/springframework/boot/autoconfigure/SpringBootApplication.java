@@ -61,6 +61,7 @@ public @interface SpringBootApplication {
 	 * Exclude specific auto-configuration classes such that they will never be applied.
 	 * @return the classes to exclude
 	 */
+//	@AliasFor 该注解用于桥接到其他注解，该注解的属性中指定了所桥接的注解类
 	//排除指定自动配置类
 	@AliasFor(annotation = EnableAutoConfiguration.class)
 	Class<?>[] exclude() default {};
