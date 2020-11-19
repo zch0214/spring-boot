@@ -61,6 +61,7 @@ public @interface SpringBootApplication {
 	 * Exclude specific auto-configuration classes such that they will never be applied.
 	 * @return the classes to exclude
 	 */
+	//排除指定自动配置类
 	@AliasFor(annotation = EnableAutoConfiguration.class)
 	Class<?>[] exclude() default {};
 
@@ -70,6 +71,7 @@ public @interface SpringBootApplication {
 	 * @return the class names to exclude
 	 * @since 1.3.0
 	 */
+	//排除指定的自动配置类名
 	@AliasFor(annotation = EnableAutoConfiguration.class)
 	String[] excludeName() default {};
 
@@ -85,6 +87,7 @@ public @interface SpringBootApplication {
 	 * @return base packages to scan
 	 * @since 1.3.0
 	 */
+	//指定扫描的基础包，激活注解组件的初始化
 	@AliasFor(annotation = ComponentScan.class, attribute = "basePackages")
 	String[] scanBasePackages() default {};
 
@@ -103,6 +106,7 @@ public @interface SpringBootApplication {
 	 * @return base packages to scan
 	 * @since 1.3.0
 	 */
+//	指定扫描的类，用于初始化
 	@AliasFor(annotation = ComponentScan.class, attribute = "basePackageClasses")
 	Class<?>[] scanBasePackageClasses() default {};
 
@@ -128,6 +132,7 @@ public @interface SpringBootApplication {
 	 * @since 2.2
 	 * @return whether to proxy {@code @Bean} methods
 	 */
+//	指定是否代理@Bean方法以强制执行bean的生命周期行为
 	@AliasFor(annotation = Configuration.class)
 	boolean proxyBeanMethods() default true;
 
